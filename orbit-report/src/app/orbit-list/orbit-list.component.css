@@ -17,6 +17,16 @@ table {
   background: mediumaquamarine;
 }
 
+.odd {
+    background-color: mediumaquamarine;
+    color: cornflowerblue;
+}
+
+.even {
+    background-color: cornflowerblue;
+    color: mediumaquamarine;
+}
+
 .header-row {
     background: cornflowerblue;
     color: #fff
