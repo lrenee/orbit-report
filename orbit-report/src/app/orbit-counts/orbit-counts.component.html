@@ -1,10 +1,11 @@
 <h3>Satellite Counts:</h3>
 <div class="counts">
    <div>Total: <span>{{ satellites.length }}</span></div>
-   <div>Space Debris: <span>{{ countSats("Space Debris") }}</span></div>
-   <div>Communication: <span>2</span></div>
-   <div>Probe: <span>2</span></div>
-   <div>Positioning: <span>1</span></div>
-   <div>Space Station: <span>2</span></div>
-   <div>Telescope: <span>1</span></div>
+   <div *ngFor = "let satType of satTypes">
+      {{ satType }}: <span>{{ countSats({{ satType }}) }}</span></div>
+   <!-- <div>Communication: <span>{{ countSats("Communication") }}</span></div>
+   <div>Probe: <span>{{ countSats("Probe") }}</span></div>
+   <div>Positioning: <span>{{ countSats("Positioning") }}</span></div>
+   <div>Space Station: <span>{{ countSats("Space Station") }}</span></div>
+   <div>Telescope: <span>{{ countSats("Telescope") }}</span></div> -->
 </div>
