@@ -18,17 +18,17 @@ table {
 }
 
 .odd {
-    background-color: mediumaquamarine;
-    color: cornflowerblue;
+    color: mediumaquamarine;
+    background-color: cornflowerblue;
 }
 
 .even {
-    background-color: cornflowerblue;
-    color: mediumaquamarine;
+    color: cornflowerblue;
+    background-color: mediumaquamarine;
 }
 
 .header-row {
-    background: cornflowerblue;
+    background:navy;
     color: #fff
 }
 

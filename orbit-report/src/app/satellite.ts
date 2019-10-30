@@ -16,15 +16,5 @@ export class Satellite {
     shouldShowWarning() : boolean {
         return this.type.toLowerCase() === "space debris";
     };
-
-
-    // shouldShowWarning(index: number) : string {
-    //     if (this.type.toLowerCase() === "space debris") {
-    //         return "w";
-    //     } else if (index % 2 === 0) {
-    //         return "e";
-    //     } else {
-    //         return "o";
-    //     }               
-    // };
+    
 }

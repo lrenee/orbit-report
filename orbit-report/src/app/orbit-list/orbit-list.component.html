@@ -11,17 +11,10 @@
        [class.odd]="isOdd"
        [class.even]="isEven"
        [class.selected]="satellite === selectedSatellite">
-   <!-- <tr *ngFor="let satellite of satellites; let index=index; let isOdd=odd; let isEven=even"
-      [class.odd]="isOdd"
-      [class.even]="isEven"
-      [class.selected]="satellite === selectedSatellite"
-      [class.warning]="satellite.shouldShowWarning()">
-       <tr [class.warning]="satellite.shouldShowWarning()" *ngFor="let satellite of satellites"> -->
-       <td>{{ satellite.name }}</td>
-       <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.type }}</td>
-       <!-- <td>{{ satellite.type }}</td> -->
-       <td>{{ satellite.operational }}</td>
-       <td>{{ satellite.orbitType }}</td>
-       <td>{{ satellite.launchDate }}</td>
-    </tr>
+      <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.name }}</td>
+      <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.type }}</td>
+      <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.operational }}</td>
+      <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.orbitType }}</td>
+      <td [class.warning]="satellite.shouldShowWarning()">{{ satellite.launchDate }}</td>
+   </tr>
 </table>
