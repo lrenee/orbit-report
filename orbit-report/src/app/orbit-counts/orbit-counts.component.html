@@ -1,8 +1,8 @@
 <h3>Satellite Counts:</h3>
 <div class="counts">
    <div>Total: <span>{{ satellites.length }}</span></div>
-   <div *ngFor = "let satType of satTypes">
-      {{ satType }}: <span>{{ countSats({{ satType }}) }}</span></div>
+   <div *ngFor = "let satellite of satellites">
+      {{ satellite.type }}: <span>{{ countSats(satellite.type) }}</span></div>
    <!-- <div>Communication: <span>{{ countSats("Communication") }}</span></div>
    <div>Probe: <span>{{ countSats("Probe") }}</span></div>
    <div>Positioning: <span>{{ countSats("Positioning") }}</span></div>
