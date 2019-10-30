@@ -10,6 +10,14 @@ export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
   displayList: Satellite[];
+  totCount: number = 0;
+  debCount: number = 0;
+  commCount: number = 0;
+  probeCount: number = 0;
+  posCount: number = 0;
+  statCount: number = 0;
+  teleCount: number = 0;
+
 
   constructor() {
     this.sourceList = [];
@@ -25,6 +33,7 @@ export class AppComponent {
            this.sourceList.push(satellite);           
          }
          this.displayList = this.sourceList.slice(0);
+         this.countSats();
          
       }.bind(this));
    }.bind(this));
@@ -48,6 +57,27 @@ export class AppComponent {
      }
     }
     this.displayList = matchingSatellites;
+    this.countSats();
  }
+
+ countSats(): number {
+  for (let i = 0; i < this.displayList.length; i++) {
+    if (this.displayList[i].type.toLowerCase() === "communication") {
+      this.commCount += 1;
+    } else if (this.displayList[i].type.toLowerCase() === "probe") {
+      this.probeCount += 1;
+    } else if (this.displayList[i].type.toLowerCase() === "space station") {
+      this.statCount += 1;
+    } else if (this.displayList[i].type.toLowerCase() === "telescope") {
+      this.teleCount += 1;
+    } else if (this.displayList[i].type.toLowerCase() === "space debris") {
+      this.debCount += 1;
+    } else if (this.displayList[i].type.toLowerCase() === "positioning") {
+      this.posCount += 1;
+    }
+  }
+  this.totCount = this.displayList.length;
+  return;
+};
 
 }
