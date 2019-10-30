@@ -8,7 +8,7 @@ import { Satellite } from '../satellite';
 })
 export class OrbitCountsComponent implements OnInit {
 
-  // totCount: number = 0;
+  typeCount: number = 0;
   // debCount: number = 0;
   // commCount: number = 0;
   // probeCount: number = 0;
@@ -23,24 +23,23 @@ export class OrbitCountsComponent implements OnInit {
   ngOnInit() {
   }
 
-  // countSats(): number {
-  //   for (let i = 0; i < this.satellites.length; i++) {
-  //     if (this.satellites.type.toLowerCase() === "communication") {
-  //       this.commCount += 1;
-  //     } else if (this.satellites.type.toLowerCase() === "probe") {
-  //       this.probeCount += 1;
-  //     } else if (this.satellites.type.toLowerCase() === "space station") {
-  //       this.statCount += 1;
-  //     } else if (this.satellites.type.toLowerCase() === "telescope") {
-  //       this.teleCount += 1;
-  //     } else if (this.satellites.type.toLowerCase() === "space debris") {
-  //       this.debCount += 1;
-  //     } else if (this.satellites.type.toLowerCase() === "positioning") {
-  //       this.posCount += 1;
-  //     }
-  //   }
-  //   this.totCount = this.satellites.length;
-  //   return;
-  // };
+  countSats(satelliteType: string): number {
+    for (let i = 0; i < this.satellites.length; i++) {
+      if (satelliteType.toLowerCase() === "communication") {
+        this.typeCount += 1;
+      } else if (satelliteType.toLowerCase() === "probe") {
+        this.typeCount += 1;
+      } else if (satelliteType.toLowerCase() === "space station") {
+        this.typeCount += 1;
+      } else if (satelliteType.toLowerCase() === "telescope") {
+        this.typeCount += 1;
+      } else if (satelliteType.toLowerCase() === "space debris") {
+        this.typeCount += 1;
+      } else if (satelliteType.toLowerCase() === "positioning") {
+        this.typeCount += 1;
+      }
+    }
+    return this.typeCount;
+  };
   
 }

@@ -10,13 +10,13 @@ export class AppComponent {
   title = 'orbit-report';
   sourceList: Satellite[];
   displayList: Satellite[];
-  totCount: number;
-  debCount: number;
-  commCount: number;
-  probeCount: number;
-  posCount: number;
-  statCount: number;
-  teleCount: number;
+  // totCount: number;
+  // debCount: number;
+  // commCount: number;
+  // probeCount: number;
+  // posCount: number;
+  // statCount: number;
+  // teleCount: number;
 
 
   constructor() {
@@ -33,7 +33,7 @@ export class AppComponent {
            this.sourceList.push(satellite);           
          }
          this.displayList = this.sourceList.slice(0);
-         this.countSats();
+        //  this.countSats();
          
       }.bind(this));
    }.bind(this));
@@ -57,43 +57,43 @@ export class AppComponent {
      }
     }
     this.displayList = matchingSatellites;
-    this.countSats();
+    // this.countSats();
  }
 
- countSats(): void {
+//  countSats(): void {
 
-  this.totCount = 0;
-  this.debCount = 0;
-  this.commCount = 0;
-  this.probeCount = 0;
-  this.posCount = 0;
-  this.statCount = 0;
-  this.teleCount = 0;
+//   this.totCount = 0;
+//   this.debCount = 0;
+//   this.commCount = 0;
+//   this.probeCount = 0;
+//   this.posCount = 0;
+//   this.statCount = 0;
+//   this.teleCount = 0;
 
-  for (let i = 0; i < this.displayList.length; i++) {
-    if (this.displayList[i].type.toLowerCase() === "communication") {
-      this.commCount += 1;
-      console.log(this.commCount);
-    } else if (this.displayList[i].type.toLowerCase() === "probe") {
-      this.probeCount += 1;
-      console.log(this.probeCount);
-    } else if (this.displayList[i].type.toLowerCase() === "space station") {
-      this.statCount += 1;
-      console.log(this.statCount);
-    } else if (this.displayList[i].type.toLowerCase() === "telescope") {
-      this.teleCount += 1;
-      console.log(this.teleCount);
-    } else if (this.displayList[i].type.toLowerCase() === "space debris") {
-      this.debCount += 1;
-      console.log(this.debCount);
-    } else if (this.displayList[i].type.toLowerCase() === "positioning") {
-      this.posCount += 1;
-      console.log(this.posCount);
-    }
-  }
-  this.totCount = this.displayList.length;
-  console.log(this.totCount);
-  return;
-};
+//   for (let i = 0; i < this.displayList.length; i++) {
+//     if (this.displayList[i].type.toLowerCase() === "communication") {
+//       this.commCount += 1;
+//       console.log(this.commCount);
+//     } else if (this.displayList[i].type.toLowerCase() === "probe") {
+//       this.probeCount += 1;
+//       console.log(this.probeCount);
+//     } else if (this.displayList[i].type.toLowerCase() === "space station") {
+//       this.statCount += 1;
+//       console.log(this.statCount);
+//     } else if (this.displayList[i].type.toLowerCase() === "telescope") {
+//       this.teleCount += 1;
+//       console.log(this.teleCount);
+//     } else if (this.displayList[i].type.toLowerCase() === "space debris") {
+//       this.debCount += 1;
+//       console.log(this.debCount);
+//     } else if (this.displayList[i].type.toLowerCase() === "positioning") {
+//       this.posCount += 1;
+//       console.log(this.posCount);
+//     }
+//   }
+//   this.totCount = this.displayList.length;
+//   console.log(this.totCount);
+//   return;
+// };
 
 }
